@@ -13,10 +13,12 @@ class PostsController < ApplicationController
     end
 
     def create
-        byebug
-     
+        @post = Post.new(params.require(:post).permit(:title, :content, :blogger_id, :destination_id))
+        @post.save
+        redirect_to post_path(@post.id)
     end
     
     def edit
     end
+
 end

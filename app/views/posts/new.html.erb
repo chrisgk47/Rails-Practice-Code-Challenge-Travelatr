@@ -9,7 +9,10 @@
     <br>
     <%= f.label :blogger %>
     <%= f.collection_select :blogger_id, Blogger.all, :id, :name %>
-        
+    <br>
+    <%= f.label "Destination" %>
+    <%= f.collection_select :destination_id, Destination.all, :id, :name %>
+
     <%= f.submit %>
     
 
