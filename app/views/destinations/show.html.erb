@@ -1,0 +1,10 @@
+<h1><%= @destination.name %></h1>
+
+<h3>Most Recent 5 Posts</h3>
+
+   <% @destination.posts.last(5).each do |post| %>
+<ul>
+<h3><%= post.title %><br></h3>
+    <%= post.content %>
+</ul>
+<% end %>

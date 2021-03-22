@@ -1,0 +1,5 @@
+<h1>Blogger Show Page</h1>
+
+<h3>Total Likes: <%= @blogger.posts.pluck(:likes).sum %> </h3>
+<br>
+<%= link_to "Post With Most Likes", post_path(@most_liked_post_instance) %>
